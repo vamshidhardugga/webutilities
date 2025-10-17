@@ -4,13 +4,17 @@
   "name": "webutilities",
   "compatibility_date": "2025-09-15",
   "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "vars": {
+    "DOMAIN_NAME": "webutilities.xyz"
+  },
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
   "observability": {
     "enabled": true
   },
   "keep_names": false,
   "minify": true,
-  "assets": {
-    "directory": ".open-next/assets",
-    "binding": "ASSETS"
-  }
+  "workers_dev": false
 }
