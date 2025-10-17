@@ -1,6 +1,6 @@
 import './globals.css'
 
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Poppins } from 'next/font/google'
 
 import { ThemeProvider } from '@/components/theme-provider'
@@ -17,6 +17,19 @@ export const metadata: Metadata = {
   title: 'Web Utilities',
   description:
     'A collection of free, simple, and powerful online web utilities. Tools for developers, designers, and content creators to make your tasks easier.',
+  authors: [{ name: 'Web Utilities' }],
+  keywords: [
+    'web utilities',
+    'online utilities',
+    'web tools',
+    'online tools',
+    'free web utilities',
+    'free online utilities',
+    'free web tools',
+    'free online tools',
+    'free utilities',
+    'free tools'
+  ],
   alternates: {
     canonical: '/'
   },
@@ -37,8 +50,8 @@ export const metadata: Metadata = {
       {
         url: `https://${DOMAIN_NAME}/images/og-image.png`,
         alt: 'Web Utilities',
-        height: 1200,
-        width: 630
+        width: 1200,
+        height: 630
       }
     ]
   },
@@ -72,6 +85,13 @@ export const metadata: Metadata = {
     shortcut: `https://${DOMAIN_NAME}/images/icon.png`,
     apple: `https://${DOMAIN_NAME}/images/icon.png`
   }
+}
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+    { media: '(prefers-color-scheme: dark)', color: '#0a0a0a' }
+  ]
 }
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
