@@ -2,6 +2,7 @@ import { FlatCompat } from '@eslint/eslintrc'
 import eslintConfigPrettier from 'eslint-config-prettier'
 import eslintPluginPrettier from 'eslint-plugin-prettier'
 import eslintPluginSimpleImportSort from 'eslint-plugin-simple-import-sort'
+import eslintPluginUnusedImports from 'eslint-plugin-unused-imports'
 import { dirname } from 'path'
 import { fileURLToPath } from 'url'
 
@@ -20,12 +21,14 @@ const eslintConfig = [
   {
     plugins: {
       prettier: eslintPluginPrettier,
-      'simple-import-sort': eslintPluginSimpleImportSort
+      'simple-import-sort': eslintPluginSimpleImportSort,
+      'unused-imports': eslintPluginUnusedImports
     },
     rules: {
       'prettier/prettier': ['error', { usePrettierrc: true }],
       'simple-import-sort/imports': 'error',
-      'simple-import-sort/exports': 'error'
+      'simple-import-sort/exports': 'error',
+      'unused-imports/no-unused-imports': 'error'
     }
   },
   eslintConfigPrettier
